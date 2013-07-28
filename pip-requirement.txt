@@ -1,1 +1,2 @@
-Plim>=0.7.12
+Plim>=0.8
+Pygmetns>=1.6
