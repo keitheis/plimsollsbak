@@ -1,0 +1,150 @@
+-namespace module="utils.formatters" name="formatters" inheritable="True"
+
+doctype 5
+html lang="en"
+  head
+    title Plimsolls - Presentation with Plim and Shower
+    meta charset="utf-8"
+    meta name="viewport" content="width=792, user-scalable=no"
+    meta http-equiv="x-ua-compatible" content="ie=edge"
+    link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css"
+    link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"
+    / Pygments themes here: https://github.com/richleland/pygments-css
+    link rel="stylesheet" href="static/pygments.css"
+
+    -scss
+      .slide {
+        i { font-style: normal; }
+        pre {
+          font-family: monospace;
+          line-height: 40px;
+        }
+      }
+
+
+  body.list
+
+    header.caption
+      h1 Plimsolls - Presentation with Plim and Shower
+      p Keith Yang
+
+
+    section#Cover.slide.cover: div
+        h2 Plimsolls Presentation Helper
+        p
+          , Brought to you by Keith Yang
+        img src="pictures/cover.jpg" alt=""
+        <!-- Photos by lamentables, http://www.flickr.com/photos/lamentables/ -->
+
+      -scss
+        #Cover {
+          h2 {
+            margin:110px 0 0;
+            color:#FFF;
+            text-align:center;
+            font-size:70px;
+            text-shadow: 3px 3px #000;
+          }
+          p {
+            margin:10px 0 0;
+            text-align:center;
+            color:#FFF;
+            font-style:italic;
+            font-size:20px;
+            a {
+              color:#FFF;
+            }
+          }
+          img {
+            width: 100%;
+          }
+        }
+
+    section.slide: div
+        h2 Plimsolls Key Features
+        ol
+          li Built on Plim, Shower and beautiful Python
+          li Build-able on local and deploy-able on remote (e.g. GitHub Page)
+          li Programmable presentation
+          li Tools supported:
+            br Font Awesome, SCSS, Markdown, Restructured Text, and Pygments
+        p.note
+          Inherited key features of
+          ,
+          a href="http://shwr.me/" target="_blank"
+            Shower
+          ,
+          , and
+          a href="http://plim.readthedocs.org/en/latest/" target="_blank"
+            Plim
+
+    section.slide: div
+        h2 Pygments Example: Code
+        pre
+          -py
+            code = """
+              -py
+                code = \"\"\"
+                #Python 2.x:
+                python -m SimpleHTTPServer
+
+                #Python 3.x:
+                python -m http.server 8000
+                \"\"\"
+              == formatters.code('bash', code)
+            """
+
+          == formatters.code('python', code)
+
+    section.slide: div
+        h2 Pygments Example: Result
+        pre
+          -py
+            code = """
+            #Python 2.x:
+            python -m SimpleHTTPServer
+
+            #Python 3.x:
+            python -m http.server 8000
+            """
+
+          == formatters.code('bash', code)
+
+    section.slide: div
+        h2 Command Line Usage
+        pre
+          -py
+            code = "$ plimc -H index.plim -o index.html"
+
+          == formatters.code('bash', code)
+
+    section#SeeMore.slide.shout: div
+        h2 
+          a href="https://github.com/keitheis/plimsolls/"
+            Plimsolls on GitHub
+          ,
+          i.icon-github
+
+      style
+        #Picture h2 {
+          color:#FFF;
+          }
+
+        #SeeMore h2 {
+          font-size:100px
+          }
+        #SeeMore img {
+          width:0.72em;
+          height:0.72em;
+          }
+
+
+    p class="badge"
+      a href="https://github.com/keitheis/plimsolls" Plimsolls
+        ,
+        i.icon-github.icon-large
+
+    .progress: div
+
+    <!-- Copyright © 2013 Keith Yang -->
+    script src="shower/shower.min.js" 
