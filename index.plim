@@ -3,7 +3,7 @@
 doctype 5
 html lang="en"
   head
-    title Plimsolls - Presentation with Plim and Shower
+    title Plimsolls - Presentation slides mixed with Plim and Shower
     meta charset="utf-8"
     meta name="viewport" content="width=792, user-scalable=no"
     meta http-equiv="x-ua-compatible" content="ie=edge"
@@ -25,12 +25,12 @@ html lang="en"
   body.list
 
     header.caption
-      h1 Plimsolls - Presentation with Plim and Shower
+      h1 Plimsolls - Presentation slides mixed with Plim and Shower
       p Keith Yang
 
 
     section#Cover.slide.cover: div
-        h2 Plimsolls Presentation Helper
+        h2 Plimsolls Presentation Helpers
         p
           , Brought to you by Keith Yang
         img src="pictures/cover.jpg" alt=""
