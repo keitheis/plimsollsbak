@@ -1,2 +1,2 @@
-Plim>0.8.1
+Plim>=0.8.2
 Pygments>=1.6
